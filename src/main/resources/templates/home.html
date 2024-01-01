@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <div class="home_img">
+        <img src="/img/teach2.jpg" alt="">
+    </div>
+
+
+    <!-- Pills navs -->
+    <div class="first_p">
+        <a  th:href="@{/login}"><button class="btn btn-success home_log" type="button">Login</button></a>
+        <a th:href="@{/register}"><button class="btn btn-primary home_res" type="button">Register</button></a>
+    </div>
+    <!-- Pills navs -->
+    <!-- Pills content -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            <form>
+                <div class="text-center mb-3">
+                    <p>Sign in with hoangcuong.utck53@gmail.com :</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="fragments/script :: script"></div>
+</body>
+</html>

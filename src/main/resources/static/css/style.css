@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    width: 200px;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+/*login and register button*/
+.home_log{
+    width:290px;
+}
+.home_res{
+    width:290px;
+}
+
+/*home image*/
+.home_img img{
+    width: 600px;
+    margin: 20px;
+}
+
