@@ -1,0 +1,114 @@
+#questionMark {
+    width: 200px;
+}
+#V {
+    color: #000000;
+}
+#F {
+    color:#000000;
+}
+
+/* Buttons Styling */
+#V, #F {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 36px; /* Kích thước chữ lớn hơn */
+}
+
+/* Button Styling */
+.btn {
+    width: 200px;
+    padding: 15px; /* Tăng độ lớn của nút */
+    font-size: 24px; /* Kích thước chữ lớn hơn */
+    font-family: Impact;
+}
+
+.wrong {
+    width: 39px;
+    margin: 3px;
+}
+.correct {
+    width: 41px;
+    margin: 2px;
+}
+.timer{
+    width: 120px;
+    margin: auto;
+    round-borders: 50%;
+    background-color: lightblue;
+}
+body {
+    background-color: yellow;
+    background: linear-gradient(to right, green, red);
+    background: linear-gradient(to right, rgba(0,200,0,0.6), rgba(200,0,0,0.8));
+}
+.question{
+    margin: 18px;
+}
+
+.answer{
+    margin:18px;
+    padding:5px;
+}
+
+h1 {
+    color: #1E80Fe;
+    font-family: Agency FB, Courier;
+    font-size: 100px !important;
+}
+h3 {
+    text-align: left;
+    font-size: 30px;
+}
+h4 {
+    font-size: 30px;
+    margin-top: 20px ;
+}
+h5{
+    margin-top: 6px;
+    font-size: 28px;
+}
+h6 {
+    font-size: 24px;
+    color: #000;
+}
+.colomn-title {
+    text-align: center;
+    font-family: Comic Sans, Script;
+    color: #251;
+}
+
+p {
+    color: red;
+    font-size: 40px;
+    margin-top: 10px !important;
+}
+#timeout {
+    color: red;
+    font-family:Agency FB,Courier;
+    font-size: 110px;
+    margin: 40px;
+}
+#retryButton {
+    background-color: yellow;
+    width: 130px;
+    padding: 2px;
+    color: #1E80Fe;
+    float: right;
+    border-color: #f90;
+    border-width: 13px;
+}
+/* CSS để căn giữa footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+}
+
+/* CSS cho nội dung trong footer */
+.footer h5 {
+    margin: 0; /* Loại bỏ margin mặc định */
+}

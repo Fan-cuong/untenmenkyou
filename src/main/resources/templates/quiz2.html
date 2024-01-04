@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style2.css">
+    <!--fontawesome-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <div class="text-center">
+        <h1><b>QUIZ</b></h1>
+        <h4 id="score">/10</h4>
+    </div>
+    <div class="container-fluid">
+        <div class=row>
+            <div class="col-md-7">
+                <h3 class="colomn-title">QUESTIONS</h3>
+            </div>
+            <div class="col-md-3">
+                <h4 style="text-align: right" class="colomn-title">YOUR ANSWERS</h4>
+            </div>
+            <div class="col-md-2">
+                <h4 class="pic colomn-title">RESULTS</h4>
+            </div>
+        </div>
+        <div class=row>
+            <div class="col-md-9 ">
+                <h3 class="question" id="ask1"><b>1:</b> The whale is a fish. </h3>
+                <h3 class="question" id="ask2"><b>2:</b> The dolphin is not a mammal.</h3>
+                <h3 class="question" id="ask3"><b>3:</b> The Nile crosses Sudan.</h3>
+                <h3 class="question" id="ask4"><b>4:</b> The longest part of human body is leg.</h3>
+                <h3 class="question" id="ask5"><b>5:</b> 1 byte is normally made from 8-bit.</h3>
+                <h3 class="question" id="ask6"><b>6:</b> The hardware is all that in the PC has weight.</h3>
+                <h3 class="question" id="ask7"><b>7:</b> Sun and Moon can be simultaneously in the sky.</h3>
+                <h3 class="question" id="ask8"><b>8:</b>The prologue is the final part of a book.</h3>
+                <h3 class="question" id="ask9"><b>9:</b> During the day you can not see stars.</h3>
+                <h3 class="question" id="ask10"><b>10:</b> The epicenter is the point from which is originated an earthquake.</h3>
+
+            </div>
+            <div class="col-md-2">
+                <div class="answer">
+                    <h4 id="ans1">Answer1</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans2">Answer2</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans3">Answer3</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans4">Answer4</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans5">Answer5</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans6">Answer6</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans7">Answer7</h4>
+                </div>
+                <div class="answer">
+                    <h4 id="ans8">Answer8</h4>
+                </div>
+            </div>
+
+            <div class="col-md-1">
+                <h5>
+                    <img class="pic correct" id="correct0" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong0" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct1" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong1" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct2" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong2" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct3" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong3" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct4" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong4" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct5" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong5" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct6" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong6" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct7" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong7" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct8" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong8" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+                <h5>
+                    <img class="pic correct" id="correct9" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
+                    <img class="pic wrong" id="wrong9" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
+                </h5>
+            </div>
+        </div>
+        <div class="text-center">
+            <label>
+                <button id="V" class="btn btn-success" name="choise">True</button>
+            </label>
+            <label>
+                <button id="F" class="btn btn-danger" name="choise">False</button>
+            </label>
+            <div class="timer">
+                <p id="time">10</p>
+            </div>
+            <h6 id="timeout"><u><strong><abbr title="You failed!!">TIMEOUT!</abbr></strong></u></h6>
+            <h6 id="loser" class="lead">I don't know if you are pretty ignorant or really stupid, but you missed lots of correct answers. Retry blindfolded, you may have more chance to raise your score.</h6>
+            <h6 id="normal" class="lead">Good, but not enough. Try again and give the correct answer to all question! You can do it!</h6>
+            <h6 id="good" class="lead">Very good! You are not as stupid as you seems.. That's enough, now why don't you invite your friends to face you?</h6>
+        </div>
+        <button id="retryButton">Retry</button>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="/js/quiz2.js"></script>
+    <footer class="" >
+        <div class="footer ">
+            <h5>
+                © 2024ー日本ITビジネスカッレジーファン · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a th:href="@{/}">Back to top</a>
+            </h5>
+        </div>
+    </footer>
+</body>
+</html>
