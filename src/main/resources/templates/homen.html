@@ -17,6 +17,16 @@
             <th scope="col">答</th>
         </tr>
         </thead>
+<!--        <tbody>-->
+<!--        <tr th:each="homenQuestion, row : ${homenQuestions}">-->
+<!--            <th th:text="${homenQuestion.id}" scope="row"></th>-->
+<!--            <td th:text="${homenQuestion.question}" style="display: flex;"></td>-->
+<!--            <td>-->
+<!--                <span th:if="${homenQuestion.userScore == 1}" style="color: green;">正解</span>-->
+<!--                <span th:if="${homenQuestion.userScore == 0}" style="color: red;">不正解</span>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
         <tbody>
         <tr th:each="homenQuestion, row : ${homenQuestions}">
             <th th:text="${homenQuestion.id}" scope="row"></th>

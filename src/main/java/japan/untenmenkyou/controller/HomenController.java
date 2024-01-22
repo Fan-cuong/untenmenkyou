@@ -31,20 +31,14 @@ public class HomenController {
     public String submitHomen(@ModelAttribute List<HomenQuestion> homenQuestions, Model model) {
         List<HomenQuestion> evaluatedQuestions = homenQuestionService.evaluateAnswers(homenQuestions);
         model.addAttribute("evaluatedQuestions", evaluatedQuestions);
-
-        int totalScore = evaluatedQuestions.stream().mapToInt(HomenQuestion::getUserScore).sum();
-        model.addAttribute("totalScore", totalScore);
-
         return "result";
     }
-
     @GetMapping("/result")
     public ModelAndView showResult() {
         ModelAndView modelAndView = new ModelAndView("result");
-        modelAndView.addObject("allHomenQuestions", homenQuestionService.getAlHomenQuestions());
+        modelAndView.addObject("allHomenQuestions", homenQuestionService.getAllHomenQuestions());
         return modelAndView;
     }
 }
-
 
 
