@@ -12,24 +12,25 @@ public class HomenQuestion {
 
     private String question;
 
-    private boolean answer;  // Đáp án sẽ được lưu dưới dạng boolean
+    private boolean answer;
 
-    private boolean userAnswer;  // Đáp án của người dùng
+    private boolean userAnswer;
 
-    // Trong class HomenQuestion
-    private int userScore;  // Trường này sẽ lưu điểm số của người dùng
+    private int userScore;  // New field to store user score
+    private boolean pass;
 
-    public int getUserScore() {
-        return userScore;
+    // Getters and setters...
+
+    public boolean isPass() {
+        return pass;
     }
 
-    public void setUserScore(int userScore) {
-        this.userScore = userScore;
+    public void setPass(boolean pass) {
+        this.pass = pass;
     }
-    // Getter và Setter cho userScore
 
 
-    // Các getter và setter...
+    // Getters and setters...
 
     public Long getId() {
         return id;
@@ -61,5 +62,13 @@ public class HomenQuestion {
 
     public void setUserAnswer(boolean userAnswer) {
         this.userAnswer = userAnswer;
+    }
+
+    public int getUserScore() {
+        return userScore;
+    }
+
+    public void setUserScore(int userScore) {
+        this.userScore = userScore;
     }
 }

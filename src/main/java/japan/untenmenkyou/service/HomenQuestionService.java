@@ -12,25 +12,22 @@ import java.util.Optional;
 @Service
 public class HomenQuestionService {
 
-    @Autowired
-    private HomenQuestionRepository homenQuestionRepository;
+    // Đây là một ví dụ, bạn cần điều chỉnh tùy thuộc vào logic của bạn
+    private List<HomenQuestion> someListOfQuestions;
 
-    public List<HomenQuestion> getAllHomenQuestions() {
-        return homenQuestionRepository.findAll();
-    }
+    // Các phương thức và trường khác của service...
 
-    // Trong HomenQuestionService
     public List<HomenQuestion> evaluateAnswers(List<HomenQuestion> homenQuestions) {
         for (HomenQuestion question : homenQuestions) {
-            // So sánh câu trả lời của người dùng với đáp án và tính điểm số
-            boolean isCorrect = question.isUserAnswer() == question.isAnswer();
-            question.setUserScore(isCorrect ? 1 : 0);
+            // Kiểm tra xem đáp án của người dùng có đúng không và cập nhật điểm
+            question.setUserScore(question.isUserAnswer() == question.isAnswer() ? 1 : 0);
         }
-        // Lưu hoặc cập nhật câu hỏi trong cơ sở dữ liệu nếu cần
-        // ...
-
         return homenQuestions;
     }
 
-
+    public List<HomenQuestion> getAllHomenQuestions() {
+        // Thực hiện logic để lấy danh sách câu hỏi từ cơ sở dữ liệu
+        // Ví dụ: return someListOfQuestions;
+        return someListOfQuestions;
+    }
 }

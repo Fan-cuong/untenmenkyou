@@ -13,32 +13,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <div class="text-center">
         <h1><b>QUIZ</b></h1>
-        <h4 id="score">/60</h4>
+        <h4 id="score">/10</h4>
     </div>
     <div class="container-fluid">
         <div class=row>
-            <div class="col-md-8">
-                <h3 class="colomn-title">問題</h3>
+            <div class="col-md-7">
+                <h3 class="colomn-title">QUESTIONS</h3>
             </div>
             <div class="col-md-3">
-                <h4 style="text-align: center" class="colomn-title">YOUR ANSWERS</h4>
+                <h4 style="text-align: right" class="colomn-title">YOUR ANSWERS</h4>
             </div>
-            <div class="col-md-1">
-                <h4 style="text-align: center" class="pic colomn-title">RESULTS</h4>
+            <div class="col-md-2">
+                <h4 class="pic colomn-title">RESULTS</h4>
             </div>
         </div>
         <div class=row>
-            <div class="col-md-9">
-                <h3 style="font-size: 20px" class="question" id="ask1"><b>1: </b>  駐停車禁止の場所では、危険防止のためでも車を停止させてはならない。 </h3>
-                <h3 style="font-size: 20px" class="question" id="ask2"><b>2: </b>  無段変速装置のあるオートマチック二輪車は、エンジンの回転数が低い場合は、車輪にエンジンの力が伝わりにくくなる。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask3"><b>3: </b>  踏切を通行しようとする場合、列車が通過したあとであれば、警音器がなっていたとしても進行することが可能。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask4"><b>4: </b>  車の速度を二倍にした場合、衝突した場合の衝撃も２倍になる。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask5"><b>5: </b>  車両通行帯のない道路の交差点で、青色の灯火の矢印が右に向いて表示された場合、原動機付自転車は右折することが可能。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask6"><b>6: </b>  酒を飲んだが、あまり酔っていなかったため、車を運転した。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask7"><b>7: </b>  交差点で警察官が手信号や灯火による信号をしている場合であったとしても、信号機の信号が優先されるため、信号機に従う必要がある。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask8"><b>8: </b>  法令を守り運転していた場合、仕事に間に合わない危険性があるため、遅刻しそうな場合は法令違反をしても良い。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask9"><b>9: </b>  信号機の信号が青色の灯火を表示している交差点の中央で、両腕を横に水平に上げている警察官と対面したので、交差点手前の停止線で停止した。</h3>
-                <h3 style="font-size: 20px" class="question" id="ask10"><b>10: </b>  片側が6メートル未満の道路では、中央線をはみ出して通行することが可能。</h3>
+            <div class="col-md-9 ">
+                <h3 class="question" id="ask1"><b>1:</b> The whale is a fish. </h3>
+                <h3 class="question" id="ask2"><b>2:</b> The dolphin is not a mammal.</h3>
+                <h3 class="question" id="ask3"><b>3:</b> The Nile crosses Sudan.</h3>
+                <h3 class="question" id="ask4"><b>4:</b> The longest part of human body is leg.</h3>
+                <h3 class="question" id="ask5"><b>5:</b> 1 byte is normally made from 8-bit.</h3>
+                <h3 class="question" id="ask6"><b>6:</b> The hardware is all that in the PC has weight.</h3>
+                <h3 class="question" id="ask7"><b>7:</b> Sun and Moon can be simultaneously in the sky.</h3>
+                <h3 class="question" id="ask8"><b>8:</b>The prologue is the final part of a book.</h3>
+                <h3 class="question" id="ask9"><b>9:</b> During the day you can not see stars.</h3>
+                <h3 class="question" id="ask10"><b>10:</b> The epicenter is the point from which is originated an earthquake.</h3>
 
             </div>
             <div class="col-md-2">
@@ -66,52 +66,46 @@
                 <div class="answer">
                     <h4 id="ans8">Answer8</h4>
                 </div>
-                <div class="answer">
-                    <h4 id="ans9">Answer9</h4>
-                </div>
-                <div class="answer">
-                    <h4 id="ans10">Answer10</h4>
-                </div>
             </div>
 
-            <div class="col-md-1" >
-                <h5 style="display: flex;justify-content: center;">
+            <div class="col-md-1">
+                <h5>
                     <img class="pic correct" id="correct0" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong0" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct1" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong1" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct2" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong2" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct3" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong3" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct4" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong4" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct5" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong5" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct6" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong6" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct7" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong7" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct8" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong8" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
-                <h5 style="display: flex;justify-content: center;">
+                <h5>
                     <img class="pic correct" id="correct9" src="http://2012.igem.org/wiki/images/8/85/Amsterdam_checkmark.png" alt="Right!">
                     <img class="pic wrong" id="wrong9" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-X-icon.png" alt="Wrong!">
                 </h5>
@@ -119,13 +113,13 @@
         </div>
         <div class="text-center">
             <label>
-                <button style="text-align: center" id="V" class="btn btn-success" name="choise">正解</button>
+                <button id="V" class="btn btn-success" name="choise">True</button>
             </label>
             <label>
-                <button id="F" class="btn btn-danger" name="choise">不正解</button>
+                <button id="F" class="btn btn-danger" name="choise">False</button>
             </label>
             <div class="timer">
-                <p id="time">60</p>
+                <p id="time">10</p>
             </div>
             <h6 id="timeout"><u><strong><abbr title="You failed!!">TIMEOUT!</abbr></strong></u></h6>
             <h6 id="loser" class="lead">I don't know if you are pretty ignorant or really stupid, but you missed lots of correct answers. Retry blindfolded, you may have more chance to raise your score.</h6>
@@ -141,7 +135,7 @@
     <footer class="" >
         <div class="footer ">
             <h5>
-                © 2024ー日本ITビジネスカッレジーファン · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a th:href="@{/homen}">Back to top</a>
+                © 2024ー日本ITビジネスカッレジーファン · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a th:href="@{/}">Back to top</a>
             </h5>
         </div>
     </footer>

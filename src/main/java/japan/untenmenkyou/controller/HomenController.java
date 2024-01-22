@@ -29,19 +29,10 @@ public class HomenController {
 
     @PostMapping("/submitHomen")
     public String submitHomen(@ModelAttribute List<HomenQuestion> homenQuestions, Model model) {
-        // Đánh giá câu trả lời và cập nhật điểm số
         List<HomenQuestion> evaluatedQuestions = homenQuestionService.evaluateAnswers(homenQuestions);
-        // Thêm danh sách câu hỏi đã đánh giá vào model
         model.addAttribute("evaluatedQuestions", evaluatedQuestions);
-        // Tính tổng điểm số
-        int totalScore = evaluatedQuestions.stream().mapToInt(HomenQuestion::getUserScore).sum();
-        // Thêm tổng điểm vào model
-        model.addAttribute("totalScore", totalScore);
-        // Chuyển hướng đến trang hiển thị kết quả
-        return "redirect:/result";
+        return "result";
     }
-
-
     @GetMapping("/result")
     public ModelAndView showResult() {
         ModelAndView modelAndView = new ModelAndView("result");
@@ -49,6 +40,5 @@ public class HomenController {
         return modelAndView;
     }
 }
-
 
 

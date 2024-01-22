@@ -61,25 +61,23 @@ public class UserController {
 
 
 
-
     @GetMapping("/karimen")
     public String karimen() {
         return "karimen";
     }
 
-    @GetMapping("/gentsuki")
-    public String gentsuki() {
-        return "gentsuki";
-    }
-    @GetMapping("/map")
-    public String learn() {
-        return "map";
-    }
-    @GetMapping("/vietnamese")
-    public String vietnamese() {
-        return "vietnamese";
+
+
+
+    @GetMapping("/quiz")
+    public String quiz() {
+        return "quiz";
     }
 
+//    @GetMapping("/learn")
+//    public String learn() {
+//        return "quiz2";
+//    }
 
 
 }
