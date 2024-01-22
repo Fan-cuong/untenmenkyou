@@ -12,25 +12,25 @@ import java.util.Optional;
 @Service
 public class HomenQuestionService {
 
-    @Autowired
-    private HomenQuestionRepository homenQuestionRepository;
+    // Các phương thức và trường khác của service...
 
-    public List<HomenQuestion> getAllHomenQuestions() {
-        return homenQuestionRepository.findAll();
-    }
-
-    // Trong HomenQuestionService
     public List<HomenQuestion> evaluateAnswers(List<HomenQuestion> homenQuestions) {
+        int correctAnswers = 0;
+
         for (HomenQuestion question : homenQuestions) {
-            // So sánh câu trả lời của người dùng với đáp án và tính điểm số
-            boolean isCorrect = question.isUserAnswer() == question.isAnswer();
-            question.setUserScore(isCorrect ? 1 : 0);
+            // Kiểm tra xem đáp án của người dùng có đúng không và cập nhật điểm
+            question.setUserScore(question.isUserAnswer() == question.isAnswer() ? 1 : 0);
+            correctAnswers += question.getUserScore();
         }
-        // Lưu hoặc cập nhật câu hỏi trong cơ sở dữ liệu nếu cần
-        // ...
+
+        // Cập nhật trạng thái "pass" hoặc "fail" dựa trên số câu trả lời đúng
+        boolean pass = correctAnswers >= 18;
+
+        // Cập nhật trạng thái và điểm số của từng câu hỏi
+        for (HomenQuestion question : homenQuestions) {
+            question.setPass(pass);
+        }
 
         return homenQuestions;
     }
-
-
 }

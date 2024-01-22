@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/head :: head">
-    <!-- Add this line in the head section -->
-    <script th:src="@{/js/homen.js}"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
@@ -10,14 +8,13 @@
     <h1>本免練習問題</h1>
 </div>
 
-<form id="homenForm" th:action="@{/submitHomen}" method="post" th:object="${homenQuestions}">
+<form th:action="@{/submitHomen}" method="post" th:object="${homenQuestions}">
     <table class="table">
         <thead>
         <tr>
             <th scope="col">ID</th>
             <th style="width: 70%" scope="col">問題</th>
-            <th scope="col">正解</th>
-            <th scope="col">不正解</th>
+            <th scope="col">答</th>
         </tr>
         </thead>
         <tbody>
@@ -26,34 +23,23 @@
             <td th:text="${homenQuestion.question}" style="display: flex;"></td>
             <td>
                 <div class="answer">
-                    <div class="form-check" style="display: flex; justify-content: center;">
-                        <input class="form-check-input" type="radio"
-                               th:id="'true' + ${row.index}"
-                               th:name="'homenQuestions[' + ${row.index} + '].userAnswer'"
-                               th:value="'true'"
-                               th:data-question-id="${homenQuestion.id}"
-                               th:data-correct-answer="${homenQuestion.answer ? 'true' : 'false'}">
-                        <label class="form-check-label" th:for="'true' + ${row.index}"></label>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="answer">
-                    <div class="form-check" style="display: flex; justify-content: center;">
-                        <input class="form-check-input" type="radio"
-                               th:id="'false' + ${row.index}"
-                               th:name="'homenQuestions[' + ${row.index} + '].userAnswer'"
-                               th:value="'false'"
-                               th:data-question-id="${homenQuestion.id}"
-                               th:data-correct-answer="${homenQuestion.answer ? 'false' : 'true'}">
-                        <label class="form-check-label" th:for="'false' + ${row.index}"></label>
-                    </div>
+                    <input type="radio"
+                           th:id="'true' + ${row.index}"
+                           th:name="'homenQuestions[' + ${row.index} + '].userAnswer'"
+                           th:value="'true'">
+                    <label th:for="'true' + ${row.index}">正解</label>
+
+                    <input type="radio"
+                           th:id="'false' + ${row.index}"
+                           th:name="'homenQuestions[' + ${row.index} + '].userAnswer'"
+                           th:value="'false'">
+                    <label th:for="'false' + ${row.index}">不正解</label>
                 </div>
             </td>
         </tr>
         </tbody>
     </table>
-    <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
+    <button type="submit">Submit</button>
 </form>
 
 <div th:replace="fragments/footer :: footer"></div>
