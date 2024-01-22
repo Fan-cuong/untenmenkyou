@@ -25,12 +25,12 @@
 }
 
 .wrong {
-    width: 39px;
+    width: 35px;
     margin: 3px;
 }
 .correct {
-    width: 41px;
-    margin: 2px;
+    width: 35px;
+    margin: 3px;
 }
 .timer{
     width: 120px;
@@ -44,12 +44,11 @@ body {
     background: linear-gradient(to right, rgba(0,200,0,0.6), rgba(200,0,0,0.8));
 }
 .question{
-    margin: 18px;
+    margin-bottom: 25px;
 }
 
 .answer{
-    margin:18px;
-    padding:5px;
+    padding:6px;
 }
 
 h1 {

@@ -1,6 +1,5 @@
 package japan.untenmenkyou.entity;
 
-
 import jakarta.persistence.*;
 
 @Entity

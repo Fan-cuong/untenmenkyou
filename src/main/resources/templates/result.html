@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<!-- Trong result.html -->
+<body>
+<h1>Kết Quả</h1>
+<p>Tổng Điểm: <span th:text="${totalScore}"></span></p>
+
+<!-- Hiển thị danh sách câu hỏi và điểm số của người dùng -->
+<table>
+    <thead>
+    <tr>
+        <th>Câu Hỏi</th>
+        <th>Điểm Số</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="question : ${evaluatedQuestions}">
+        <td th:text="${question.question}"></td>
+        <td th:text="${question.userScore}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</body>
+</html>

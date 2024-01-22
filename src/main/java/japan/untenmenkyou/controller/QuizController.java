@@ -16,7 +16,7 @@ public class QuizController {
     @Autowired
     private KarimenQuestionService karimenQuestionService;
 
-    @GetMapping("/learn")
+    @GetMapping("/quiz")
     public String showQuiz(Model model) {
         List<KarimenQuestion> questions = karimenQuestionService.getAllQuestions();
         model.addAttribute("questions", questions);
